@@ -1,0 +1,179 @@
+<%- layout('layouts/main') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+	<title>Servicios</title>
+	
+</head>
+<body>
+
+    <style>
+    body {
+		  background: url(//subtlepatterns.com/patterns/scribble_light.png);
+		font-family: Calluna, Arial, sans-serif;
+		min-height: 1000px;
+	  }
+	  
+	  .container{
+		margin-top: 50px;
+	  }
+	  
+	  h1, .card-title, a, #toast{
+		font-family: 'Roboto', sans-serif;
+	  }
+	  
+	  h1{
+		color: #888888;
+	  }
+	  
+	  .card{
+		box-shadow: 0px 15px 35px -5px rgba(50, 88, 130, 0.32);
+		border-radius: 15px;
+		transition: transform .2s;
+	  }
+	  
+	  .card-body{
+		padding: 10px;
+		margin-top: -50px;
+		-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		transition: all 1s ease-in-out;
+	  }
+	  .card-body a{
+		visibility: hidden;
+	  }
+	  
+	  .card:hover > .card-body{
+		margin-top: -0px;
+		-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		transition: all 1s ease;
+	  }
+	  
+	  .card:hover{
+		transform: scale(1.02);
+	  }
+	  
+	  .card:hover > .card-body > a{
+		visibility: visible;
+	  }
+	  
+	  .first-image{
+		width: 100%;
+		border-top-left-radius: 15px;
+		border-top-right-radius: 15px;
+	  }
+	  
+	  .cart, .wish{
+		padding: 5px;
+		width: 50px;
+		height: 50px;
+		margin-left: -24px;
+		margin-top: 0px;
+		margin-right: 3px;
+		background-color: #fff;
+		color: #5C7CFA;
+		border-top-left-radius: 8px;
+		border-bottom-left-radius: 8px;
+		text-align: center;
+		-ms-display: flex;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	  }
+	  
+	  .wish{
+		color: #C50707;
+	  }
+	  
+	  #toast, #toast-cart{
+		padding: 10px;
+		padding-left: 5px;
+		position: fixed;
+		width: 230px;
+		height: 50px;
+		top: 0;
+		left: 80%;
+		transform:translate(-50%);
+		background-color: #EFF2FF;
+		color: #76777E;
+		padding: 1px;
+		border-radius: 8px;
+		text-align:center;
+		z-index: 1;
+		box-shadow: 0 0 20px rgba(0,0,0,0.3);
+		visibility: hidden;
+		opacity: 0;
+		-ms-display: flex;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 18px;
+	  }
+	  #toast.show, #toast-cart.show{
+		visibility:visible;
+		animation:fadeInOut 3s;
+	  }
+	  
+	  @keyframes fadeInOut{
+		5%,95%{opacity:1;top:50px}
+		15%,85%{opacity:1;top:30px}
+	  }
+
+    </style>
+
+<div id="toast"></div>
+<div id="toast-cart"></div>
+<div class="container">
+  <center><h1>Conoce los servicios de nuestra tienda virtual</h1></center>
+  <hr>			  
+  <div class="row">
+  <div class="col-lg-4">
+    <div class="card" style="width: 18rem;">
+
+  <img src="https://i.blogs.es/e5ccca/print3d/450_1000.jpg" class="first-image" class="animated zoomIn">
+  <div class="card-body">
+    <a href="/impresion-3D" onclick="addCart()"><center>ver mas</center></a>
+    <hr>
+    <center>
+      <h5 class="card-title">impresion-3D</h5>
+    </center>
+  </div>
+</div>
+</div>
+      <div class="col-lg-4">
+    <div class="card" style="width: 18rem;">
+    <img src="https://www.stanser.com/wp-content/uploads/2018/08/Que%CC%81-diferencia-existe-entre-corte-router-CNC-Y-corte-la%CC%81ser-CNC.jpg" class="first-image">
+  <div class="card-body">
+    <a href="/Cortes-2D" onclick="addCart()"><center>ver mas</center></a>
+    <hr>
+    <center>
+      <h5 class="card-title">Corte laser (2D)</h5>
+    </center>
+  </div>
+</div>
+</div>
+    <div class="col-lg-4">
+    <div class="card" style="width: 18rem;">
+     
+  <img src="https://www.researchgate.net/profile/Dusan_Arsic/publication/321330878/figure/fig1/AS:565578656354306@1511855867868/Example-of-the-PMMA-product-for-laser-cutting.png" class="first-image">
+  <div class="card-body">
+    <a href="/cortes-3D" onclick="addCart()"><center>ver mas</center></a>
+    <hr>
+    <center>
+      <h5 class="card-title">Cortes 3D</h5>
+    </center>
+  </div>
+</div>
+</div>
+  </div>
+</div><br><br>
+<center><div id="toast"></div>
+    <div id="toast-cart"></div>
+    <hr>
+	
+</body>
+</html>

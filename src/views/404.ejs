@@ -3,7 +3,335 @@
     <head>
         <title>404 error</title>
 </head>
-<body><img src="C:\Users\MARLON\Documents\PROGRAMACION\Programas-Random\Nueva carpeta\sadface.gif"/>
+<body>
+    <style>
+
+        /*primera parte*/
+        body{
+		background-color: #DFE7EF;
+	  }
+	  
+	  .container{
+		margin-top: 50px;
+	  }
+	  
+	  h1, .card-title, a, #toast{
+		font-family: 'Roboto', sans-serif;
+	  }
+	  
+	  h1{
+		color: #888888;
+	  }
+	  
+	  .card{
+		box-shadow: 0px 15px 35px -5px rgba(50, 88, 130, 0.32);
+		border-radius: 15px;
+		transition: transform .2s;
+	  }
+	  
+	  .card-body{
+		padding: 10px;
+		margin-top: -50px;
+		-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		transition: all 1s ease-in-out;
+	  }
+	  .card-body a{
+		visibility: hidden;
+	  }
+	  
+	  .card:hover > .card-body{
+		margin-top: -0px;
+		-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		transition: all 1s ease;
+	  }
+	  
+	  .card:hover{
+		transform: scale(1.02);
+	  }
+	  
+	  .card:hover > .card-body > a{
+		visibility: visible;
+	  }
+	  
+	  .first-image{
+		width: 100%;
+		border-top-left-radius: 15px;
+		border-top-right-radius: 15px;
+	  }
+	  
+	  .cart, .wish{
+		padding: 5px;
+		width: 50px;
+		height: 50px;
+		margin-left: -24px;
+		margin-top: 0px;
+		margin-right: 3px;
+		background-color: #fff;
+		color: #5C7CFA;
+		border-top-left-radius: 8px;
+		border-bottom-left-radius: 8px;
+		text-align: center;
+		-ms-display: flex;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	  }
+	  
+	  .wish{
+		color: #C50707;
+	  }
+	  
+	  #toast, #toast-cart{
+		padding: 10px;
+		padding-left: 5px;
+		position: fixed;
+		width: 230px;
+		height: 50px;
+		top: 0;
+		left: 80%;
+		transform:translate(-50%);
+		background-color: #EFF2FF;
+		color: #76777E;
+		padding: 1px;
+		border-radius: 8px;
+		text-align:center;
+		z-index: 1;
+		box-shadow: 0 0 20px rgba(0,0,0,0.3);
+		visibility: hidden;
+		opacity: 0;
+		-ms-display: flex;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 18px;
+	  }
+	  #toast.show, #toast-cart.show{
+		visibility:visible;
+		animation:fadeInOut 3s;
+	  }
+	  
+	  @keyframes fadeInOut{
+		5%,95%{opacity:1;top:50px}
+		15%,85%{opacity:1;top:30px}
+	  }
+/* empieza la segunda parte*/
+
+        @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+        @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,700);
+        .snip1418 {
+          font-family: 'Raleway', Arial, sans-serif;
+          position: relative;
+          overflow: hidden;
+          margin: 10px;
+          min-width: 230px;
+          max-width: 315px;
+          width: 100%;
+          background: #ffffff;
+          text-align: left;
+          color: #000000;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+          font-size: 16px;
+          -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+          -webkit-perspective: 20em;
+          perspective: 20em;
+        }
+        .snip1418 * {
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          -webkit-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+        }
+        .snip1418 img {
+          max-width: 100%;
+          vertical-align: top;
+          position: relative;
+        }
+        .snip1418 .add-to-cart {
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding-right: 10px;
+          color: #ffffff;
+          font-weight: 700;
+          text-transform: uppercase;
+          font-size: 0.9em;
+          opacity: 0;
+          background-color: #409ad5;
+          -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+          -webkit-transform-origin: 100% 0;
+          -ms-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+        }
+        .snip1418 .add-to-cart i {
+          display: inline-block;
+          margin-right: 10px;
+          width: 40px;
+          line-height: 40px;
+          text-align: center;
+          background-color: #164666;
+          color: #ffffff;
+          font-size: 1.4em;
+        }
+        .snip1418 figcaption {
+          padding: 20px;
+        }
+        .snip1418 h3,
+        .snip1418 p {
+          margin: 0;
+        }
+        .snip1418 h3 {
+          font-size: 1.5em;
+          font-weight: 700;
+          margin-bottom: 10px;
+          text-transform: uppercase;
+        }
+        .snip1418 p {
+          font-size: 0.9em;
+          letter-spacing: 1px;
+          font-weight: 400;
+        }
+        .snip1418 .price {
+          font-weight: 500;
+          font-size: 1.5em;
+          line-height: 48px;
+          letter-spacing: 1px;
+        }
+        .snip1418 .price s {
+          margin-right: 5px;
+          opacity: 0.5;
+          font-size: 0.9em;
+        }
+        .snip1418 a {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+        }
+        .snip1418:hover .add-to-cart,
+        .snip1418.hover .add-to-cart {
+          opacity: 1;
+          -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+        }
+        .snip1418:hover .add-to-cart i,
+        .snip1418.hover .add-to-cart i {
+          background-color: #2980b9;
+        }
+        </style>
+
+<div id="toast"></div>
+		<div id="toast-cart"></div>
+		<div class="container">
+
+
+<figure class="snip1418"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample85.jpg" alt="sample85"/>
+    <div class="add-to-cart"> <i class="ion-android-add"></i><span>Add to Cart</span></div>
+    <figcaption>
+      <h3>Vestibulum a sapien libero.</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt quam placerat lectus iaculis rhoncus s</p>
+      <div class="price">
+        <s>$24.00</s>$19.00
+      </div>
+    </figcaption><a href="#"></a>
+  </figure>
+  <div class="snip1418" style="width: 25rem;>
+<div class="col-lg-4">
+    <figure class="card" "><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample92.jpg" alt="sample92"/>
+    <div class="add-to-cart"> <i class="ion-android-add"></i><span>Add to Cart</span></div>
+    <figcaption>
+      <h3>Vestibulum a sapien libero.</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt quam placerat lectus iaculis rhoncus s </p>
+      <div class="price">
+        <s>$5.00</s>$19.00
+      </div>
+    </figcaption><a href="#"></a>
+  </figure></div></div> 
+
+  <div id="toast"></div>
+		<div id="toast-cart"></div>
+		<div class="container">
+  
+                <figure class="snip1418"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample85.jpg" alt="sample85"/>
+                    <div class="add-to-cart"> <i class="ion-android-add"></i><span>Add to Cart</span></div>
+                    <figcaption>
+                      <h3>Vestibulum a sapien libero.</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt quam placerat lectus iaculis rhoncus s</p>
+                      <div class="price">
+                        <s>$24.00</s>$19.00
+                      </div>
+                    </figcaption><a href="#"></a>
+                  </figure>
+                  <div class="snip1418" style="width: 25rem;>
+                <div class="col-lg-4">
+                    <figure class="card" "><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample92.jpg" alt="sample92"/>
+                    <div class="add-to-cart"> <i class="ion-android-add"></i><span>Add to Cart</span></div>
+                    <figcaption>
+                      <h3>Vestibulum a sapien libero.</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt quam placerat lectus iaculis rhoncus s </p>
+                      <div class="price">
+                        <s>$5.00</s>$19.00
+                      </div>
+                    </figcaption><a href="#"></a>
+                  </figure></div></div> 
+
+                  <hr>			  
+		  <div class="row">
+		  <div class="col-lg-4">
+			<div class="card" style="width: 18rem;">
+			 
+		  <img src="https://image.flaticon.com/icons/svg/919/919855.svg" class="first-image" class="animated zoomIn">
+		  <div class="card-body">
+			<a href="/Rasbperry" onclick="addCart()"><center>ver mas</center></a>
+			<hr>
+			<center>
+			  <h5 class="card-title">Raspberrypi</h5>
+			</center>
+		  </div>
+		</div>
+		</div>
+			  <div class="col-lg-4">
+			<div class="card" style="width: 18rem;">
+			<img src="https://www.linuxadictos.com/wp-content/uploads/arduino-logo.jpg" class="first-image">
+		  <div class="card-body">
+			<a href="Arduino" onclick="addCart()"><center>ver mas</center></a>
+			<hr>
+			<center>
+			  <h5 class="card-title">Arduino</h5>
+			</center>
+		  </div>
+		</div>
+		</div>
+			<div class="col-lg-4">
+			<div class="card" style="width: 18rem;">
+			 
+		  <img src="https://www.geekfactory.mx/wp-content/uploads/2014/02/Distribuidor_DFRobot_en_Mexico.jpg" class="first-image">
+		  <div class="card-body">
+			<a href="DFROBOT" onclick="addCart()"><center>ver mas</center></a>
+			<hr>
+			<center>
+			  <h5 class="card-title">DFROBOT</h5>
+			</center>
+		  </div>
+		</div>
+		</div>
+		  </div>
+		</div><br><br>
+		
+    
+
+    
+
+
+
+            
+
 
 </body>
 </html>
@@ -12,4 +340,3 @@
 
 
 
-<

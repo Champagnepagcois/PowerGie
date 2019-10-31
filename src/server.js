@@ -33,12 +33,12 @@ app.use((req, res, next) => {
   app.locals.signinMessage = req.flash('signinMessage');
   app.locals.signupMessage = req.flash('signupMessage');
   app.locals.user = req.user;
-  console.log(app.locals)
   next();
 });
 
 // routes
-app.use('/', require('./routes/index'));
+app.use(require('./routes/auth.routes'));
+app.use('/', require('./routes/index.routes'));
 
 // Starting the server
 app.listen(app.get('port'), () => {

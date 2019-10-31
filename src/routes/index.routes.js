@@ -2,6 +2,51 @@ const router = require('express').Router();
 const passport = require('passport');
 
 
+router.get('/registro',(req, res) => {
+  res.render('registros.ejs'); 
+
+})
+
+router.get('/pagos',(req, res) => {
+  res.render('pagos.ejs'); 
+
+})
+
+router.get('/cortes-3D',(req, res) => {
+  res.render('cortes3d.ejs'); 
+
+})
+
+router.get('/Impresion-3D',(req, res) => {
+  res.render('Impresion3d.ejs'); 
+
+})
+
+router.get('/Cortes-2D',(req, res) => {
+  res.render('cortelaser.ejs'); 
+
+})
+
+router.get('/servicios',(req, res) => {
+  res.render('servicios.ejs'); 
+
+})
+
+router.get('/concursos',(req, res) => {
+  res.render('Concursos.ejs'); 
+
+})
+
+router.get('/pruebas',(req, res) => {
+  res.render('pruebas.ejs'); 
+
+})
+
+router.get('/404',(req, res) => {
+  res.render('404.ejs'); 
+
+})
+
 router.get('/contacto',(req, res) => {
   res.render('contac.ejs'); 
 
