@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!--iconos-->
+<head >
+  <!--iconos-->
   <script src="https://kit.fontawesome.com/557981b83d.js" crossorigin="anonymous"></script>
   <!--Animacion-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
@@ -26,7 +26,25 @@
             <a class="nav-link" href="/Productos">Productos</a>
           </li>
 
-           
+          <!--
+  
+          <% if (!user) { %>
+          <li class="nav-item ">
+            <a class="nav-link" href="/signin">Signin</a>
+          </li>
+          <% } else { %>
+          <a href="/logout">Logout</a>
+          <a href="/profile">Profle</a>
+          <% } %>
+  
+          <% if (!user) { %>
+          <li class="nav-item ">
+            <a class="nav-link" href="/signup">Signup</a>
+          </li>
+          <% } else { %>
+          <a href="/logout">Logout</a>
+          <a href="/profile">Profle</a>
+          <% } %>-->  
   
           <li class="nav-item ">
             <a class="nav-link" href="/mi-cuenta">Mi cuenta</a>
@@ -38,68 +56,81 @@
       </div>
   </nav>
   </div>
-    
-	
-	
 </head>
 <body>
-    
-    <!--SECCION!-->
+  <!-- NAVIGATION -->
+ <script>/* <% if (!user) { %>
+  <a href="/signin">Signin</a>
+  <a href="/signup">Signup</a>
+  <% } else { %>
+  <a href="/logout">Logout</a>
+  <a href="/profile">Profle</a>
+  <% } %>*/</script>
+
+  <%if (signinMessage) {%>
+    <p><%= signinMessage %></p>
+  <% } %>
+  <%if (signupMessage) {%>
+    <p><%= signupMessage %></p>
+  <% } %>
+
+  <%- body %>
+
+  <!--SECCION!-->
   <div class="container-fluid" id="About">
-        <div class="row bg-dark text-white p-5 text-center">
-          <div class="col-sm-3">
-            <img src="https://pbs.twimg.com/profile_images/887153955792240640/sreiVfil_400x400.jpg" width="200" height="200"
-              class="animated zoomIn " />
-            <!--<i class="fab fa-youtue fa-10x"> </i>-->
-          </div>
-          <style>
-            
-          a{
-            color: #888888;
-          }
-        </style>
-    
-    <style>
-        h8{
-      color: #888888;
-      }
-    
-      .fa-instagram {
-        color: rgb(255,255, 255);
-      }
-      </style>
+    <div class="row bg-dark text-white p-5 text-center">
+      <div class="col-sm-3">
+        <img src="https://pbs.twimg.com/profile_images/887153955792240640/sreiVfil_400x400.jpg" width="200" height="200"
+          class="animated zoomIn " />
+        <!--<i class="fab fa-youtue fa-10x"> </i>-->
+      </div>
+      <style>
+        
+      a{
+		color: #888888;
+	  }
+    </style>
+
+<style>
+    h8{
+  color: #888888;
+  }
+
+  .fa-instagram {
+    color: rgb(255,255, 255);
+  }
+  </style>
+      
+      <div class="col-sm-3">
+        <h3><u>Informacion</u></h3>
+        <p><a href="#" >Sobre nosotros</a></p>
+        <p><a href="#" >Quienes somos?</a></p>
+        <p><a href="/politicas-de-privacidad" >Politicas de Privacidad</a></p>
+        
+       </div>
+      
+      <div class="col-sm-3">
+          <h3><u>Servicio al cliente</u></h3>
+          <p><a href="#" >Garantia</a></p>
+          <p><a href="#" >Pagos</a></p>
+          <p><a href="#" >Facturacion</a></p>
+
           
-          <div class="col-sm-3">
-            <h3><u>Informacion</u></h3>
-            <p><a href="#" >Sobre nosotros</a></p>
-            <p><a href="#" >Quienes somos?</a></p>
-            <p><a href="/politicas-de-privacidad" >Politicas de Privacidad</a></p>
-            
-           </div>
+          <p><h5><a href="https://www.facebook.com/Educ4Ting-109294607096330/?epa=SEARCH_BOX"> Facebook
+            <i class="fab fa-facebook"></i></a></p></h8>
+            </div> 
+
+      
+
+       <div class="col-sm-3">
+          <h3><u>Contactanos </u></h3>
+          <p><a href="/contacto">Mandanos tu opinion</h3></p></a>
+          <p><h8>ventas@PowerGie.mx</h3></p>
+          <p><h8>Telefono: 5555555555</h3></p>
           
-          <div class="col-sm-3">
-              <h3><u>Servicio al cliente</u></h3>
-              <p><a href="#" >Garantia</a></p>
-              <p><a href="#" >Pagos</a></p>
-              <p><a href="#" >Facturacion</a></p>
-    
-              
-              <p><h5><a href="https://www.facebook.com/Educ4Ting-109294607096330/?epa=SEARCH_BOX"> Facebook
-                <i class="fab fa-facebook"></i></a></p></h8>
-                </div> 
-    
-          
-    
-           <div class="col-sm-3">
-              <h3><u>Contactanos </u></h3>
-              <p><a href="/contacto">Mandanos tu opinion</h3></p></a>
-              <p><h8>ventas@PowerGie.mx</h3></p>
-              <p><h8>Telefono: 5555555555</h3></p>
-              
-              <p><h5><a href="https://www.instagram.com/powergiemx/"> instagram
-               <i class="fab fa-instagram"></i></a></p></h5>
-               </div> </div></div>
-          
-	
+          <p><h5><a href="https://www.instagram.com/powergiemx/"> instagram
+           <i class="fab fa-instagram"></i></a></p></h5>
+           </div> </div></div>
+      
 </body>
 </html>

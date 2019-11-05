@@ -1,6 +1,9 @@
 const router = require('express').Router();
 const passport = require('passport');
 
+router.get('/view-pro',(req, res) =>{
+  res.render('view-pro.ejs')
+})
 
 router.get('/registro',(req, res) => {
   res.render('registros.ejs'); 
