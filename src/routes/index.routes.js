@@ -1,6 +1,14 @@
 const router = require('express').Router();
 const passport = require('passport');
 
+router.get('/Cursos',(req, res) =>{
+  res.render('cursos.ejs')
+})
+
+router.get('/product',(req, res) =>{
+  res.render('produc.ejs')
+})
+
 router.get('/view-pro',(req, res) =>{
   res.render('view-pro.ejs')
 })
